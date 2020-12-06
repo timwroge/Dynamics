@@ -29,10 +29,10 @@ class State : public std::vector<T> {};
  */
 class System {
     /* /brief The system class must take in a transformation which describes the
-     * transformation from teh current state of the system, and the inputs to the output of the system
+     * transformation from the current state of the system, and the inputs to the output of the system
      */
     template <class TransformationType>
-    virtual System(TransformationType );
+    virtual System(TransformationType);
     /*
      * The call operator is overloaded to consume the new system inputs of the system
      * and generate the output
