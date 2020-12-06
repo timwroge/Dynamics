@@ -63,7 +63,7 @@ they are only able to be changed in only about one or more dimension at a time. 
 traditional biological systems, like walking robots (like Boston Dynamics walking dog, Spot) or bipedal robots 
 (like Atlas).
 
-[source and more reading material] (https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-832-underactuated-robotics-spring-2009/readings/MIT6_832s09_read_ch01.pdf)
+[source and more reading material](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-832-underactuated-robotics-spring-2009/readings/MIT6_832s09_read_ch01.pdf)
 
 
 NOTE: The control algorithms presented here will likely work well for the fully actuated system as well as the 
