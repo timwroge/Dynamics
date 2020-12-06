@@ -37,3 +37,37 @@ the form:
 $$  \dot{ x}(t) = f( x(t))  $$ 
 
 Where `f()` is an arbitrary function. 
+
+## Control
+
+Control is broadly used to change the dynamics of a system and produce a desired state of the system.
+Depending on the system, you may have more or less control of the dynamics of the system. The distinction
+here is made for two such systems:
+
+### Fully Actuated Systems
+This form of system is broadly used in robotics and other communities. Fully actuated robotic systems are
+capable of controlling all aspects of the state space. For instance, with a 3D printer, the state space might
+look like this:
+
+$$ x = [x, y, z]$$
+
+Where the state x is defined as just the cartesian coordinates of any point in space. A 3D printer is able to
+indendently actuate all of these states, that is, if torque is applied to the x-axis, the y-axis, or the z-axis,
+the system will reach its goal (any other point in the box of a 3D printer) pretty quickly and there is nothing
+else to worry about. This library has support for these systems, but likely the dynamics are highly linear 
+and a simple PID controller would suffice for any of your control needs.
+
+### Underactuated Systems
+Underactuated systems by comparison have much more limitations to their dynamics. These systems are such that
+they are only able to be changed in only about one or more dimension at a time. These systems look closer to 
+traditional biological systems, like walking robots (like Boston Dynamics walking dog, Spot) or bipedal robots 
+(like Atlas).
+
+[source and more reading material] (https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-832-underactuated-robotics-spring-2009/readings/MIT6_832s09_read_ch01.pdf)
+
+
+NOTE: The control algorithms presented here will likely work well for the fully actuated system as well as the 
+under actuated system but the general rule of thumb is to stick with the simplest solution and work up from 
+there. i.e. PID controllers, then PID controllers with Gain Scheduling, then LQR, then the more complicated
+algorithms.
+
