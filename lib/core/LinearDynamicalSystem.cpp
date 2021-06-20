@@ -8,7 +8,7 @@
  */
 #include <dynamics/LinearSystem.hh>
 
-using namespace Dynamics::core::linear;
+using namespace dynamics::core::linear;
 
 template <class TransformationType, class StateType, class InputType>
 LinearSystem<TransformationType, StateType, InputType>::LinearSystem(const TransformationType linearTransformation) :
@@ -16,5 +16,5 @@ LinearSystem<TransformationType, StateType, InputType>::LinearSystem(const Trans
 
 template <class TransformationType, class StateType, class InputType>
 State<StateType> LinearSystem<TransformationType, StateType, InputType>::update(const InputType & SystemInputs) const {
-    return _transformation(SystemInputs);
+    return _state+_transformation(SystemInputs);
 }

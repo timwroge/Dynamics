@@ -9,7 +9,7 @@
  */
 #include <vector>
 
-namespace Dynamics{
+namespace dynamics{
 namespace core{
 
 /* /brief  State

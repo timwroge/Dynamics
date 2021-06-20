@@ -9,9 +9,9 @@
 #include <vector>
 #include <dynamics/Dynamics.hh>
 
-using namespace Dynamics::core;
+using namespace dynamics::core;
 
-namespace Dynamics{
+namespace dynamics{
 namespace core{
 namespace linear{
 
